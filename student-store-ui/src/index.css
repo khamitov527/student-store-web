@@ -81,7 +81,7 @@ a {
   font-size: 36px;
 }
 .material-icons.md-48 {
-  font-size: 40px;
+  font-size: 48px;
 }
 
 /* Rules for using icons as black on a light background. */
@@ -99,4 +99,3 @@ a {
 .material-icons.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3);
 }
-
