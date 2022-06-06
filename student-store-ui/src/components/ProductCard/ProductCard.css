@@ -46,7 +46,7 @@
   padding: 5px;
 }
 .ProductCard .actions .quantity .amt {
-  background: var(--accent-orange);
+  background: var(--muted);
   color: white;
   width: 20px;
   height: 20px;

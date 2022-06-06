@@ -9,21 +9,28 @@ export default function ProductCard({ product, quantity, addToCart, removeFromCa
   return (
     <div className="ProductCard">
       <div className="media">
-        {product.image ? <img src={product.image} alt="product cover" /> : <img src={codepath} alt="product cover" />}
+        {product.image ? 
+          <img src={product.image} alt="product cover" /> 
+          : 
+          <img src={codepath} alt="product cover" />
+        }
       </div>
       <div className="product-info">
         <div className="info">
-          <p className="product-name">{product.name}</p>
+          <p className="product-name">
+            {product.name}
+          </p>
+
           <Stars rating={4} max={5} />
           <p className="product-price">{formatPrice(product.price)}</p>
         </div>
         <div className="actions">
           <div className="buttons">
-            <i className="material-icons" onClick={addToCart}>
-              <AddCircleIcon />
+            <i >
+              <AddCircleIcon className="material-icons" onClick={addToCart}/>
             </i>
-            <i className="material-icons" onClick={removeFromCart}>
-              <RemoveCircleIcon />
+            <i >
+              <RemoveCircleIcon className="material-icons" onClick={removeFromCart}/>
             </i>
           </div>
 
