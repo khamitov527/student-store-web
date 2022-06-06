@@ -7,7 +7,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import "./SubNavbar.css"
 
 export default function SubNavbar({
-  user,
   activeCategory,
   setActiveCategory,
   handleOnSearchInputChange,

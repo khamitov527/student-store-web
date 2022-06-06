@@ -8,7 +8,6 @@ import Navbar from "../Navbar/Navbar"
 import "./Home.css"
 
 export default function Home({
-  user,
   isFetching,
   products,
   activeCategory,
@@ -44,7 +43,6 @@ export default function Home({
     <div className="Home">
       <Navbar />
       <SubNavbar
-        user={user}
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
         handleOnSearchInputChange={handleOnSearchInputChange}

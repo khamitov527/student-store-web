@@ -21,7 +21,6 @@ const groupOrderDetailsByOrderId = (orderDetails) => {
 }
 
 export default function Orders({
-  user,
   orders,
   activeCategory,
   setActiveCategory,
@@ -36,7 +35,6 @@ export default function Orders({
     <div className="Orders">
       <Navbar />
       <SubNavbar
-        user={user}
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
         handleOnSearchInputChange={handleOnSearchInputChange}

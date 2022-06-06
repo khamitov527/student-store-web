@@ -1,28 +1,18 @@
-/**
- * Function that removes an item from the shopping cart
- *
- * @param {Item} item - the item to remove
- * @return {Cart}
- */
-export const removeFromCart = (cart, item) => {
-  const newCart = {
-    ...cart,
-    [item.name]: cart[item.name] - 1,
-  }
-
-  if (!newCart[item.name]) {
-    delete newCart[item.name]
-  }
-
-  return newCart
+export const removeFromCart = (cart, item) => {	
+  const newCart = {	
+      ...cart,	
+      [item.name]: cart[item.name] - 1,	
+      [item.id]: cart[item.id]-1	
+  }	
+  if(!newCart[item.id]){	
+      delete newCart[item.id]	
+  }	
+  if (!newCart[item.name]) {	
+      delete newCart[item.name]	
+  }	
+  return newCart	
 }
 
-/**
- * Function that adds an item to the cart and then returns the cart
- *
- * @param {Item} item - the item to add
- * @return {Cart}
- */
 export const addToCart = (cart, item) => {
   if (cart.hasOwnProperty(item.id)) {
     return {
@@ -37,12 +27,6 @@ export const addToCart = (cart, item) => {
   }
 }
 
-/**
- * Function that determines the number of items currently in the cart for a particular item
- *
- * @param {Item} item - the item in question
- * @return {Number}
- */
 export const getQuantityOfItemInCart = (cart, item) => {
   return cart[item.id] || 0
 }

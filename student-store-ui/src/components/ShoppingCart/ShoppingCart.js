@@ -8,7 +8,6 @@ import { calculateItemSubtotal, calculateTaxesAndFees, calculateTotal } from "..
 import "./ShoppingCart.css"
 
 export default function ShoppingCart({
-  user,
   cart,
   products,
   getTotalItemsInCart,
@@ -50,7 +49,6 @@ export default function ShoppingCart({
     <div className="ShoppingCart">
       <Navbar />
       <SubNavbar
-        user={user}
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
         handleOnSearchInputChange={handleOnSearchInputChange}
@@ -100,13 +98,7 @@ export default function ShoppingCart({
         ) : null}
 
         <div className="checkout">
-          {user?.email ? (
             <button onClick={onCheckoutSubmit}>Checkout</button>
-          ) : (
-            <button className="is-disabled" disabled>
-              Sign In To Checkout
-            </button>
-          )}
         </div>
       </div>
       <Footer />

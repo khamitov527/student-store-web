@@ -14,7 +14,7 @@ export default function ProductCard({ product, quantity, addToCart, removeFromCa
       <div className="product-info">
         <div className="info">
           <p className="product-name">{product.name}</p>
-          <Stars rating={4.5} max={5} />
+          <Stars rating={4} max={5} />
           <p className="product-price">{formatPrice(product.price)}</p>
         </div>
         <div className="actions">

@@ -4,7 +4,6 @@ import Footer from "../Footer/Footer"
 import "./NotFound.css"
 
 export default function NotFound({
-  user,
   activeCategory,
   setActiveCategory,
   handleOnSearchInputChange,
@@ -14,7 +13,6 @@ export default function NotFound({
     <div className="NotFound">
       <Navbar />
       <SubNavbar
-        user={user}
         activeCategory={activeCategory}
         setActiveCategory={setActiveCategory}
         handleOnSearchInputChange={handleOnSearchInputChange}

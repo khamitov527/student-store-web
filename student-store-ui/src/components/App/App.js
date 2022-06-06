@@ -10,8 +10,7 @@ import "./App.css"
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState("All Categories")
-  const [searchInputValue, setSearchInputValue] = useState("")
-  const [user, setUser] = useState({})    
+  const [searchInputValue, setSearchInputValue] = useState("")  
   const [products, setProducts] = useState([])    
   const [orders, setOrders] = useState([])    
   const [cart, setCart] = useState({})
@@ -81,7 +80,6 @@ export default function App() {
             path="/"
             element={
               <Home
-                user={user}
                 error={error}
                 products={products}
                 isFetching={isFetching}
@@ -99,10 +97,8 @@ export default function App() {
             path="/orders"
             element={
               <Orders
-                user={user}
                 error={error}
                 orders={orders}
-                setUser={setUser}
                 products={products}
                 isFetching={isFetching}
                 activeCategory={activeCategory}
@@ -116,10 +112,8 @@ export default function App() {
             path="/shopping-cart"
             element={
               <ShoppingCart
-                user={user}
                 cart={cart}
                 error={error}
-                setUser={setUser}
                 products={products}
                 activeCategory={activeCategory}
                 setActiveCategory={setActiveCategory}
@@ -138,7 +132,6 @@ export default function App() {
             path="*"
             element={
               <NotFound
-                user={user}
                 error={error}
                 products={products}
                 activeCategory={activeCategory}
