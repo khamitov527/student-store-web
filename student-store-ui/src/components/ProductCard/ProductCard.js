@@ -4,15 +4,29 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import { formatPrice } from "../../utils/format"
 import "./ProductCard.css"
+import { useNavigate } from "react-router-dom";
 
 export default function ProductCard({ product, quantity, addToCart, removeFromCart }) {
+  let navigate = useNavigate();
   return (
     <div className="ProductCard">
       <div className="media">
         {product.image ? 
-          <img src={product.image} alt="product cover" /> 
+          <img 
+            src={product.image} 
+            alt="product cover"
+            onClick={() => {
+              navigate("/" + product.id);
+            }}
+          /> 
           : 
-          <img src={codepath} alt="product cover" />
+          <img 
+            src={codepath} 
+            alt="product cover"
+            onClick={() => {
+              navigate("/" + product.id);
+            }} 
+          />
         }
       </div>
       <div className="product-info">

@@ -5,6 +5,7 @@ import Home from "../Home/Home"
 import Orders from "../Orders/Orders"
 import NotFound from "../NotFound/NotFound"
 import ShoppingCart from "../ShoppingCart/ShoppingCart"
+import ProductDetails from "../ProductDetails/ProductDetails"
 import { removeFromCart, addToCart, getQuantityOfItemInCart, getTotalItemsInCart } from "../../utils/cart"
 import "./App.css"
 
@@ -141,6 +142,7 @@ export default function App() {
               />
             }
           />
+          <Route path="/:id" element={ <ProductDetails addToCart={handleOnAddToCart} /> } />
         </Routes>
       </BrowserRouter>
     </div>
