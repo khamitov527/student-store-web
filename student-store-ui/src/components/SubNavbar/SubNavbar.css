@@ -56,23 +56,11 @@
   min-width: 400px;
 }
 
-.SubNavbar .content .help,
-.SubNavbar .content .auth a,
 .SubNavbar .content .cart a {
   display: flex;
   flex-direction: row;
   align-items: center;
   font-weight: 500;
-}
-
-.SubNavbar .content .help p {
-  margin-left: 5px;
-  color: var(--dark-blue);
-}
-
-.SubNavbar .content .auth p {
-  margin: 0 5px;
-  color: var(--dark-blue);
 }
 
 .SubNavbar .content .cart {
@@ -140,8 +128,4 @@
   width: 50px;
 }
 
-.SubNavbar .help-login {
-  color: var(--dark-blue);
-  height: 30px;
-  width: 30px;
-}
+

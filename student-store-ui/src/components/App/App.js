@@ -2,8 +2,6 @@ import { useState, useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import axios from "axios"
 import Home from "../Home/Home"
-import Signup from "../Signup/Signup"
-import Login from "../Login/Login"
 import Orders from "../Orders/Orders"
 import NotFound from "../NotFound/NotFound"
 import ShoppingCart from "../ShoppingCart/ShoppingCart"
@@ -13,12 +11,12 @@ import "./App.css"
 export default function App() {
   const [activeCategory, setActiveCategory] = useState("All Categories")
   const [searchInputValue, setSearchInputValue] = useState("")
-  const [user, setUser] = useState({})
-  const [products, setProducts] = useState([])
-  const [orders, setOrders] = useState([])
+  const [user, setUser] = useState({})    
+  const [products, setProducts] = useState([])    
+  const [orders, setOrders] = useState([])    
   const [cart, setCart] = useState({})
   const [isFetching, setIsFetching] = useState(false)
-  const [isCheckingOut, setIsCheckingOut] = useState(false)
+  const [isCheckingOut, setIsCheckingOut] = useState(false)    
   const [error, setError] = useState(null)
 
   const handleOnRemoveFromCart = (item) => setCart(removeFromCart(cart, item))
@@ -97,8 +95,6 @@ export default function App() {
               />
             }
           />
-          <Route path="/login" element={<Login user={user} setUser={setUser} />} />
-          <Route path="/signup" element={<Signup user={user} setUser={setUser} />} />
           <Route
             path="/orders"
             element={

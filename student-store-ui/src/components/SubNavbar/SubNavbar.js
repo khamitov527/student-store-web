@@ -1,8 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 import SearchIcon from '@mui/icons-material/Search';
-import FaceIcon from '@mui/icons-material/Face';
-import HelpIcon from '@mui/icons-material/Help';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -35,25 +33,6 @@ export default function SubNavbar({
           </div>
 
           <div className="links">
-            <span className="help">
-              <HelpIcon className="help-login"/>
-              <p>Help</p>
-            </span>
-
-            <div className="auth">
-              {user?.email ? (
-                <Link to="/orders">
-                  <FaceIcon />
-                  {user.email}
-                </Link>
-              ) : (
-                <Link to="/login">
-                  <FaceIcon className="help-login"/>
-                  <p>Login</p>
-                </Link>
-              )}
-            </div>
-
             <div className="cart">
               <Link to="/shopping-cart">
                 <p>My Cart</p>
