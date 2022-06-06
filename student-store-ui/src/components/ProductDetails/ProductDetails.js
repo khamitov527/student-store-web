@@ -19,7 +19,7 @@ export default function ProductDetails({ addToCart }) {
 
   async function getData() {
     setLoading(true);
-    let product = await axios.get(`http://localhost:3001/store/${params.id}`);
+    let product = await axios.get(`${process.env.REACT_APP_REMOTE_HOST_URL}/store/${paramsId}`);
     setProduct(product.data.product);
   }
 

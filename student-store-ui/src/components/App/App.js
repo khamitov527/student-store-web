@@ -32,7 +32,7 @@ export default function App() {
     setIsCheckingOut(true)
 
     try {
-      const res = await axios.post("http://localhost:3001/orders", { order: cart })
+      const res = await axios.post(`${process.env.REACT_APP_REMOTE_HOST_URL}/orders`, { order: cart })
       if (res?.data?.order) {
         setOrders((o) => [...res.data.order, ...o])
         setIsCheckingOut(false)
@@ -55,7 +55,7 @@ export default function App() {
       setIsFetching(true)
 
       try {
-        const res = await axios.get("http://localhost:3001/store")
+        const res = await axios.get(`${process.env.REACT_APP_REMOTE_HOST_URL}/store`)
         if (res?.data?.products) {
           setProducts(res.data.products)
         } else {
